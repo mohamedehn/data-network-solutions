@@ -39,7 +39,7 @@ export default function Example() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#home">
               <span className="sr-only">Your Company</span>
-              <img className="h-2 w-auto sm:h-12" src={logo} alt=""/>
+              <img className="h-2 w-auto sm:h-16" src={logo} alt=""/>
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
