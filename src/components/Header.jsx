@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, ChartBarIcon, CursorArrowRaysIcon, ShieldCheckIcon, Squares2X2Icon, XMarkIcon,} from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import "../styles/Header.css"
+//import "../styles/Header.css"
 import logo from "../assets/logo.png"
 
 const solutions = [

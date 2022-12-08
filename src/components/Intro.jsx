@@ -25,7 +25,7 @@ const features = [
 
 export default function Intro() {
   return (
-    <div className="bg-white py-24 sm:py-32 lg:py-40">
+    <div className="bg-white py-24 sm:py-32 lg:py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="sm:text-center">
           <h2 className="text-lg font-semibold leading-8 text-indigo-600">Nos métiers</h2>
