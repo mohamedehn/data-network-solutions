@@ -1,10 +1,15 @@
 import './styles/App.css';
 import React from 'react';
 import Header from './components/Header';
-import Intro from './components/Intro';
+import Works from './components/Works';
 import Hero from './components/Hero';
 import Presentation from './components/Presentation';
 import Footer from './components/Footer';
+import Activities from './components/Activities';
+import Conseil from './components/Conseil';
+import Engenieer from './components/Engenieer';
+import Consulting from './components/Consulting';
+import Distribution from './components/Distribution';
 
 function App() {
   return (
@@ -12,7 +17,12 @@ function App() {
       <Header/>
       <Hero/>
       <Presentation/>
-      <Intro/>
+      <Activities/>
+      <Works/>
+      <Conseil/>
+      <Engenieer/>
+      <Consulting/>
+      <Distribution/>
       <Footer/>
     </div>
   );

@@ -1,0 +1,42 @@
+import Lottie from "react-lottie";
+import animation from "../animations/86098-engineering-manager.json"
+
+export default function Engenieer (){
+   
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        // here is where we will declare lottie animation
+        animationData: animation,
+        rendererSettings: {
+           preserveAspectRatio: "xMidYMid slice",
+        },
+     };
+
+    return (
+        <section className="max-w-screen-xl mx-auto py-2 px-4 sm:px-8 md:flex block justify-between">
+            <div className="max-w-xl self-center w-96">
+                <p> <Lottie options={defaultOptions}/></p>
+            </div>
+            <div className="max-w-xl">
+                <div className="py-4 my-28">
+                    <h3 className="text-3xl text-indigo-600 font-semibold md:text-4xl">
+                        Ingénierie
+                    </h3>
+                    <p className="text-gray-500 leading-relaxed mt-3 text-justify">
+                    Notre équipe d’ingénieurs associent connaissances approfondies de votre secteur, expertise dans votre domaine de compétences et 
+                    convictions sur les actions à mener. Ils vous accompagnent dans vos locaux ou bien à distance, de façon pragmatique et innovante 
+                    pour dessiner votre avenir, réaliser vos objectifs et réussir la transformation de votre organisation. Passionnés, engagés et 
+                    confirmés dans leurs domaines de compétences, ils développent une approche collaborative et novatrice et font de vos priorités 
+                    les leurs.
+                    </p>
+                </div>
+            </div>
+            <style jsx>{`
+                .cta-pr-btn:hover svg {
+                    transform: translateX(5px)
+                }
+            `}</style>
+        </section>
+    )
+}
