@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import { Bars3Icon, ChartBarIcon, CursorArrowRaysIcon, ShieldCheckIcon, Squares2X2Icon, XMarkIcon,} from '@heroicons/react/24/outline'
+import { ClipboardDocumentListIcon, UserGroupIcon, GlobeAltIcon, Cog6ToothIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 //import "../styles/Header.css"
 import logo from "../assets/logo.png"
@@ -9,21 +9,21 @@ const solutions = [
   {
     name: 'Conseil et Audit',
     description: 'Ensemble, nous trouverons les solutions à vos défis.',
-    href: '#',
-    icon: ChartBarIcon,
+    href: '#conseil',
+    icon: UserGroupIcon,
   },
   {
     name: 'Ingénierie',
     description: 'Connaissances approfondies de votre secteur, expertise dans votre domaine de compétences et convictions sur les actions à mener.',
-    href: '#',
-    icon: CursorArrowRaysIcon,
+    href: '#ingenierie',
+    icon: Cog6ToothIcon,
   },
-  { name: 'Consulting', description: "Nous vous accompagnons de bout en bout dans vos projets.", href: '#', icon: ShieldCheckIcon },
+  { name: 'Consulting', description: "Nous vous accompagnons de bout en bout dans vos projets.", href: '#consulting', icon: ClipboardDocumentListIcon },
   {
     name: 'Distribution',
     description: "DNS Distribution fournit la technologie dont les entreprises ont besoin",
-    href: '#',
-    icon: Squares2X2Icon,
+    href: '#distribution',
+    icon: GlobeAltIcon,
   },
 ]
 
@@ -39,7 +39,7 @@ export default function Example() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#home">
               <span className="sr-only">Your Company</span>
-              <img className="h-2 w-auto sm:h-16" src={logo} alt=""/>
+              <img className="h-14 w-auto sm:h-16" src={logo} alt=""/>
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -104,8 +104,8 @@ export default function Example() {
             <a href="#partenaires" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Partenaires
             </a>
-            <a href="#references" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Références
+            <a href="#contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Contact
             </a>
             <a href="carrieres" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Carrières
@@ -128,7 +128,7 @@ export default function Example() {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"/>
+                  <img className="h-12 w-auto" src={logo} alt="Your Company"/>
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

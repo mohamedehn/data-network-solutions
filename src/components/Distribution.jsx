@@ -14,13 +14,10 @@ export default function Distribution (){
      };
 
     return (
-        <section className="max-w-screen-xl mx-auto py-2 px-4 sm:px-8 md:flex block justify-between">
-            <div className="max-w-xl self-center w-96">
-                <p> <Lottie options={defaultOptions}/></p>
-            </div>
+        <section className="max-w-screen-xl mx-auto py-2 px-4 sm:px-8 md:flex block justify-between" id="distribution">
             <div className="max-w-xl">
-                <div className="py-4 my-28">
-                    <h3 className="text-3xl text-indigo-600 font-semibold md:text-4xl">
+                <div className="py-4 md:my-28">
+                    <h3 className="text-3xl text-[#3150f8] font-semibold md:text-4xl">
                         Distribution
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3 text-justify">
@@ -32,6 +29,9 @@ export default function Distribution (){
                         proposons des outils et des technologies adaptées à votre activité !
                     </p>
                 </div>
+            </div>
+            <div className="max-w-xl self-center md:w-96 w-auto hidden md:block">
+                <p> <Lottie options={defaultOptions}/></p>
             </div>
             <style jsx>{`
                 .cta-pr-btn:hover svg {

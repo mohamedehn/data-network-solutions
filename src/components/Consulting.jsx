@@ -14,10 +14,10 @@ export default function Consulting (){
      };
 
     return (
-        <section className="max-w-screen-xl mx-auto py-2 px-4 sm:px-8 md:flex block justify-between">
+        <section className="max-w-screen-xl mx-auto py-2 px-4 sm:px-8 md:flex block justify-between" id="consulting">
             <div className="max-w-xl">
-                <div className="py-4 my-28">
-                    <h3 className="text-3xl text-indigo-600 font-semibold md:text-4xl">
+                <div className="py-4 md:my-28">
+                    <h3 className="text-3xl text-[#3150f8] font-semibold md:text-4xl">
                         Consulting
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3 text-justify">
@@ -32,7 +32,7 @@ export default function Consulting (){
                     </p>
                 </div>
             </div>
-            <div className="max-w-xl self-center w-max">
+            <div className="max-w-xl self-center md:w-max w-auto hidden md:block">
                 <p> <Lottie options={defaultOptions}/></p>
             </div>
             <style jsx>{`

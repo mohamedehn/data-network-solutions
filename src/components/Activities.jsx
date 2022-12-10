@@ -1,4 +1,4 @@
-import ScrollToTop from "./ScrollToTop"
+//import ScrollToTop from "./ScrollToTop"
 
 
 export default function Activities () {
@@ -20,9 +20,9 @@ export default function Activities () {
   
     return (
         <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 lg:px-8 pb-24">
-            <ScrollToTop/>
+            {/* <ScrollToTop/> */}
             <div className="space-y-3 text-center">
-                <h1 className="text-3xl text-indigo-600 font-semibold">
+                <h1 className="text-3xl text-[#3150f8] font-semibold">
                     Nos domaines d'activités
                 </h1>
             </div>

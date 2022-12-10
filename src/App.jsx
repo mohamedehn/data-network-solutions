@@ -10,6 +10,8 @@ import Conseil from './components/Conseil';
 import Engenieer from './components/Engenieer';
 import Consulting from './components/Consulting';
 import Distribution from './components/Distribution';
+import Form from './components/Form';
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
       <Engenieer/>
       <Consulting/>
       <Distribution/>
+      <Form/>
       <Footer/>
+      <ScrollToTop/>
     </div>
   );
 }
