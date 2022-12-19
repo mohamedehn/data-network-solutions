@@ -33,7 +33,7 @@ export default function Presentation (){
                     </p>
                 </div>
             </div>
-            <div className="max-w-xl self-center">
+            <div className="max-w-xl self-center md:w-full w-auto">
                 <p> <Lottie options={defaultOptions}/></p>
             </div>
             <style jsx>{`

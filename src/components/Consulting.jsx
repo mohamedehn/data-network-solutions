@@ -32,7 +32,7 @@ export default function Consulting (){
                     </p>
                 </div>
             </div>
-            <div className="max-w-xl self-center md:w-max w-auto hidden md:block">
+            <div className="max-w-xl self-center md:w-full w-auto hidden md:block">
                 <p> <Lottie options={defaultOptions}/></p>
             </div>
             <style jsx>{`

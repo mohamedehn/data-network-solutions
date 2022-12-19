@@ -26,7 +26,7 @@ export default function Activities () {
                     Nos domaines d'activités
                 </h1>
             </div>
-            <div className="mt-14 gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-14 gap-16 sm:grid sm:grid-cols-2 lg:grid-cols-3 text-justify">
                 {
                     faqsList.map((item, idx) => (
                         <div 

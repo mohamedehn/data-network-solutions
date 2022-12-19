@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 
 export default function Footer (){
 
@@ -7,7 +8,7 @@ export default function Footer (){
             name: 'Mentions légales'
         },
         {
-            href: '#carrieres',
+            href: '/carrieres',
             name: 'Carrières'
         },
 
@@ -55,9 +56,9 @@ export default function Footer (){
                 {
                     footerNavs.map((item, idx) => (
                         <li className=" hover:text-gray-800">
-                            <a key={idx} href={item.href}>
+                            <NavLink to={item.href} key={idx}>
                                 { item.name }
-                            </a>
+                            </NavLink>
                         </li>
                     ))
                 }

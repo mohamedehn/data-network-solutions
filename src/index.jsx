@@ -4,13 +4,15 @@ import './styles/index.css';
 import{BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Career from "./pages/Career"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
         <Routes>
-          <Route path="/" element={<App/>}/>
+          <Route path="/home" element={<App/>}/>
+          <Route path="/carrieres" element={<Career/>}/>
         </Routes>
       </Router>
   </React.StrictMode>
