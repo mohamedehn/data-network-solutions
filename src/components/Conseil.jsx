@@ -29,7 +29,7 @@ export default function Conseil (){
                     </p>
                 </div>
             </div>
-            <div className="max-w-xl self-center hidden md:block">
+            <div className="max-w-xl self-center hidden md:block md: w-full">
                 <p> <Lottie options={defaultOptions}/></p>
             </div>
             <style jsx>{`
