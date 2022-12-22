@@ -34,9 +34,9 @@ export default function Presentation (){
                 </div>
             </div>
             <div className="max-w-xl self-center md:w-full w-auto">
-                <p> <Lottie options={defaultOptions}/></p>
+                <Lottie options={defaultOptions}/>
             </div>
-            <style jsx>{`
+            <style jsx="true">{`
                 .cta-pr-btn:hover svg {
                     transform: translateX(5px)
                 }

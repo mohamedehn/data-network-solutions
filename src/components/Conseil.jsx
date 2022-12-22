@@ -30,9 +30,9 @@ export default function Conseil (){
                 </div>
             </div>
             <div className="max-w-xl self-center hidden md:block md: w-full">
-                <p> <Lottie options={defaultOptions}/></p>
+                <Lottie options={defaultOptions}/>
             </div>
-            <style jsx>{`
+            <style jsx="true">{`
                 .cta-pr-btn:hover svg {
                     transform: translateX(5px)
                 }

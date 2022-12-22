@@ -16,7 +16,7 @@ export default function Engenieer (){
     return (
         <section className="max-w-screen-xl mx-auto py-2 px-4 sm:px-8 md:flex block justify-between" id="ingenierie">
             <div className="max-w-xl self-center md:w-96 w-auto hidden md:block">
-                <p> <Lottie options={defaultOptions}/></p>
+                <Lottie options={defaultOptions}/>
             </div>
             <div className="max-w-xl">
                 <div className="py-4 md:my-28">
@@ -32,7 +32,7 @@ export default function Engenieer (){
                     </p>
                 </div>
             </div>
-            <style jsx>{`
+            <style jsx="true">{`
                 .cta-pr-btn:hover svg {
                     transform: translateX(5px)
                 }

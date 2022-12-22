@@ -3,10 +3,11 @@ import { Popover, Transition } from '@headlessui/react'
 //import "../styles/Header.css"
 import logo from "../assets/logo.png"
 import { NavLink } from 'react-router-dom'
+import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 
 // function classNames(...classes) {
-//   return classes.filter(Boolean).join(' ')
-// }
+//    return classes.filter(Boolean).join(' ')
+//  }
 
 export default function HeaderCareer() {
   return (
@@ -14,16 +15,16 @@ export default function HeaderCareer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <NavLink to="/home">
+            <NavLink to="/">
               <span className="sr-only">Your Company</span>
               <img className="h-14 w-auto sm:h-16" src={logo} alt=""/>
             </NavLink>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
-            {/* <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </Popover.Button> */}
+            </Popover.Button> 
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
             <Popover className="relative">
@@ -78,7 +79,7 @@ export default function HeaderCareer() {
               )}
             </Popover>
 
-            <NavLink to="/home" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <NavLink to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Accueil
             </NavLink>
             <a href="#contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
@@ -108,26 +109,19 @@ export default function HeaderCareer() {
                   <img className="h-12 w-auto" src={logo} alt="Your Company"/>
                 </div>
                 <div className="-mr-2">
-                  {/* <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button> */}
+                  </Popover.Button>
                 </div>
               </div>
-              {/* <div className="mt-6">
+               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
-                    >
-                      <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
-                      <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                    </a>
-                  ))}
+                    <NavLink to="/" className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+                      <span className="ml-3 text-base font-medium text-gray-900">Accueil</span>
+                    </NavLink>
                 </nav>
-              </div> */}
+              </div> 
             </div>
           </div>
         </Popover.Panel>
