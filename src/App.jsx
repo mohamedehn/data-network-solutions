@@ -12,6 +12,7 @@ import Consulting from './components/Consulting';
 import Distribution from './components/Distribution';
 import Form from './components/Form';
 import ScrollToTop from './components/ScrollToTop'
+import Adress from './components/Adress';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Consulting/>
       <Distribution/>
       <Form/>
+      <Adress/>
       <Footer/>
       <ScrollToTop/>
     </div>
