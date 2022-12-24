@@ -17,7 +17,7 @@ export default function Presentation (){
         <section className="max-w-screen-xl mx-auto py-4 px-4 sm:px-8 md:flex block justify-between">
             <div className="max-w-xl">
                 <div className="py-4 my-28">
-                    <h3 className="text-3xl text-[#3150f8] font-semibold md:text-4xl">
+                    <h3 className="text-3xl text-[#3150f8] font-semibold md:text-4xl" id="presentation">
                         Le Groupe DNS <span className="text-gray-800"> <br/>Votre tremplin vers l’entreprise de demain.</span>
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3 text-justify">

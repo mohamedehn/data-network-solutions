@@ -5,6 +5,7 @@ import{BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Career from "./pages/Career"
+import Mentions from './pages/Mentions';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App/>}/>
           <Route path="/carrieres" element={<Career/>}/>
+          <Route path="/mentions" element={<Mentions/>}/>
         </Routes>
       </Router>
   </React.StrictMode>

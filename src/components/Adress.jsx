@@ -12,7 +12,7 @@ export default function Adress () {
         </div>
         <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
           <div className="flex flex-wrap pt-12 lg:pt-0">
-            <div className="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 lg:w-full xl:w-6/12 px-3 md:px-6 xl:px-12">
+            {/* <div className="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 lg:w-full xl:w-6/12 px-3 md:px-6 xl:px-12">
               <div className="flex items-start">
                 <div className="shrink-0">
                   <div className="p-4 bg-blue-600 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
@@ -27,7 +27,7 @@ export default function Adress () {
                   <p className="text-gray-500">+1 234-567-89</p>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 lg:w-full xl:w-6/12 px-3 md:px-6 xl:px-12">
               <div className="flex align-start">
                 <div className="shrink-0">

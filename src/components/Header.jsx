@@ -45,6 +45,8 @@ export default function Header() {
               <img className="h-14 w-auto sm:h-16" src={logo} alt=""/>
             </NavLink>
           </div>
+          <a href="#presentation" className="text-base font-medium text-gray-500 hover:text-gray-900">Qui sommes-nous ?</a>
+          <a href="#activites" className="text-base font-medium text-gray-500 hover:text-gray-900">Activités</a>
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
@@ -61,6 +63,7 @@ export default function Header() {
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
+
                     <span>Métiers</span>
                     <ChevronDownIcon
                       className={classNames(
@@ -103,10 +106,6 @@ export default function Header() {
                 </>
               )}
             </Popover>
-
-            <a href="#partenaires" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Partenaires
-            </a>
             <a href="#contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Contact
             </a>

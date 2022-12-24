@@ -4,7 +4,7 @@ export default function Footer (){
 
     const footerNavs = [
         {
-            href: '#mentions',
+            href: '/mentions',
             name: 'Mentions légales'
         },
         {
@@ -15,7 +15,7 @@ export default function Footer (){
         {
             href: '#contact',
             name: 'Contact'
-        }
+        },
     ]
 
     return (
@@ -57,11 +57,12 @@ export default function Footer (){
                     footerNavs.map((item, idx) => (
                         <li className=" hover:text-gray-800" key={idx}>
                             <NavLink to={item.href} key={idx}>
-                                { item.name }
+                                {item.name}
                             </NavLink>
                         </li>
                     ))
                 }
+                    <a href="https://mohamedehn.github.io/my-portfolio/">Powered by Digital Comet</a>
                 </ul>
             </div>
             <style jsx="true">{`
