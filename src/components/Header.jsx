@@ -41,19 +41,20 @@ export default function Header() {
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <NavLink to="/">
-              <span className="sr-only">Your Company</span>
+              {/* <span className="sr-only">Your Company</span> */}
               <img className="h-14 w-auto sm:h-16" src={logo} alt=""/>
             </NavLink>
           </div>
-          <a href="#presentation" className="text-base font-medium text-gray-500 hover:text-gray-900">Qui sommes-nous ?</a>
-          <a href="#activites" className="text-base font-medium text-gray-500 hover:text-gray-900">Activités</a>
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
+          
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
+          <a href="#presentation" className="text-base font-medium text-gray-500 hover:text-gray-900">Qui sommes-nous ?</a>
+          <a href="#activites" className="text-base font-medium text-gray-500 hover:text-gray-900">Activités</a>
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -63,7 +64,6 @@ export default function Header() {
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
-
                     <span>Métiers</span>
                     <ChevronDownIcon
                       className={classNames(
