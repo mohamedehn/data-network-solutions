@@ -62,7 +62,9 @@ export default function Footer (){
                         </li>
                     ))
                 }
-                    <a href="https://mohamedehn.github.io/my-portfolio/">Powered by Digital Comet</a>
+                    <li className="hover:text-gray-800 list-none"> 
+                        <a href="https://mohamedehn.github.io/my-portfolio/">Powered by Digital Comet</a>
+                    </li>
                 </ul>
             </div>
             <style jsx="true">{`
