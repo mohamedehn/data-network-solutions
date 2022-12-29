@@ -2,6 +2,7 @@
     {
         "id": "1",
         "title": "Conducteur de travaux",
+        "intro" : "Le conducteur de travaux est celui qui planifie et contrôle les travaux de construction, ou d'aménagements paysagers. Il encadre une équipe de techniciens et d'ouvriers avec l'aide d'un ou plusieurs chefs de chantier.",
         "desc": "Le conducteur de travaux est celui qui planifie et contrôle les travaux de construction, ou d'aménagements paysagers. Il encadre une équipe de techniciens et d'ouvriers avec l'aide d'un ou plusieurs chefs de chantier. Missions : Vous avez la responsabilité de la phase conception avec le Bureau d'études. - Vous déterminez les meilleurs solutions techniques de création de Génie Civil (en trancheuse, par Forage, en Traditionnelle, en infrastructure aérienne...) adaptées à l'ingénierie Fibre optique. - Vous réalisez les devis de travaux. - Vous consultez les gestionnaires de voirie. - Vous consultez et sélectionnez les fournisseurs et sous-traitants. - Vous organisez et coordonnez les chantiers. - Vous avez en charge la gestion financière des affaires. - Vous faites les recettes et les livraisons de chantiers. - Vous lancez la facturation et surveillez les créances.",
         "img": "https://f.hellowork.com/obs-static-images/seo/ObsJob/conducteur-de-travaux.jpg",
         "authorName": "",
@@ -9,7 +10,8 @@
     },
     {
         "title": "Technicien mobile",
-        "desc": "La fibre optique constitue l'avenir des réseaux haut débit. Le technicien fibre optique est donc actuellement un métier très porteur, en charge de garantir l'équipement de l'intégralité du territoire. La nécessité de maintenance et de mise à jour assure de plus un bon niveau de recrutements pour de nombreuses années à venir. Avis aux candidats passionnés de technologie.",
+        "intro": "La fibre optique constitue l'avenir des réseaux haut débit. Le technicien fibre optique est donc actuellement un métier très porteur, en charge de garantir l'équipement de l'intégralité du territoire. La nécessité de maintenance et de mise à jour assure de plus un bon niveau de recrutements pour de nombreuses années à venir. Avis aux candidats passionnés de technologie.",
+        "desc" : "",
         "img": "http://www.sysoco.fr/wp-content/uploads/JBY-PPI-FH-Lecate-1022x1024.jpg",
         "authorName": "DNS",
         "date": "Jan 4 2022",
@@ -17,7 +19,8 @@
     },
     {
         "title": "Chef de projet",
-        "desc": "La fibre optique constitue l'avenir des réseaux haut débit. Le technicien fibre optique est donc actuellement un métier très porteur, en charge de garantir l'équipement de l'intégralité du territoire. La nécessité de maintenance et de mise à jour assure de plus un bon niveau de recrutements pour de nombreuses années à venir. Avis aux candidats passionnés de technologie.            ",
+        "intro": "La fibre optique constitue l'avenir des réseaux haut débit. Le technicien fibre optique est donc actuellement un métier très porteur, en charge de garantir l'équipement de l'intégralité du territoire. La nécessité de maintenance et de mise à jour assure de plus un bon niveau de recrutements pour de nombreuses années à venir. Avis aux candidats passionnés de technologie.            ",
+        "desc" : "",
         "img": "http://www.sysoco.fr/wp-content/uploads/JBY-PPI-FH-Lecate-1022x1024.jpg",
         "authorName": "DNS",
         "date": "Jan 4 2022",

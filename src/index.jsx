@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import Career from "./pages/Career"
 import Mentions from './pages/Mentions';
 import Job from './pages/Job';
+import Error from './pages/Error';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
           <Route path="/carrieres" element={<Career/>}/>
           <Route path="/mentions" element={<Mentions/>}/>
           <Route path="/job/:id" element={<Job/>}/>
+          <Route path="*" element={<Error/>}/>
         </Routes>
       </Router>
   </React.StrictMode>

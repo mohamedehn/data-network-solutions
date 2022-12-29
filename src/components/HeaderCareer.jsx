@@ -85,9 +85,9 @@ export default function HeaderCareer() {
             <a href="#contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Contact
             </a>
-            <a href="carrieres" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <NavLink to="/carrieres" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Carrières
-            </a>
+            </NavLink>
           </Popover.Group>
         </div>
       </div>

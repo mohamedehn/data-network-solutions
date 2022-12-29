@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import posts from "../job.json"
 
 export default function CareerCard () {
@@ -17,7 +17,7 @@ export default function CareerCard () {
                 {
                     posts.map((items, key) => (
                         <article className="max-w-md mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm" key={key}>
-                            <Link to ={`/Job/${items.id}`} key={items.id}>
+                            <NavLink to ={`/Job/${items.id}`} key={items.id}>
                                 <img src={items.img} loading="lazy" alt={items.title}  className="w-full h-48 rounded-t-md object-cover" />
                                 <div className="flex items-center mt-2 pt-3 ml-4 mr-2">
                                     {/* <div className="flex-none w-10 h-10 rounded-full">
@@ -32,9 +32,9 @@ export default function CareerCard () {
                                     <h3 className="text-xl text-gray-900">
                                         {items.title}
                                     </h3>
-                                    <p className="text-gray-400 text-sm mt-1">{items.desc}</p>
+                                    <p className="text-gray-400 text-sm mt-1">{items.intro}</p>
                                 </div>
-                            </Link>
+                            </NavLink>
                         </article>
                     ))
                 }
