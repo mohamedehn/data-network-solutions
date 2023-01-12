@@ -85,6 +85,17 @@ export default function Form (){
                 </div>
               </div>
               <div className="p-2 w-full">
+                <div className="relative">
+                  <label
+                    htmlFor="piece"
+                    className="leading-7 text-sm text-gray-600 block"
+                  >
+                    Pièce jointe
+                  </label>
+                  <input type="file" id="piece" name="piece" className="bg-gray-100 rounded border w-full border-gray-300 focus:border-indigo-500 h-10 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"/>
+                </div>
+              </div>
+              <div className="p-2 w-full">
                 <button className="flex mx-auto text-white bg-[#3150f8] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                   Envoyer
                 </button>
