@@ -1,7 +1,12 @@
+import { useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import posts from "../job.json"
 
 export default function CareerCard () {
+
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     
     return (
         <section className="mt-12 mx-auto px-4 max-w-screen-xl lg:px-8">
