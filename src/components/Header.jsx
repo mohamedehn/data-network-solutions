@@ -53,21 +53,21 @@ export default function Header() {
           </div>
           
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-          <a href="#presentation" className="text-base font-medium text-gray-500 hover:text-gray-900">Qui sommes-nous ?</a>
-          <a href="#activites" className="text-base font-medium text-gray-500 hover:text-gray-900">Activités</a>
+          <a href="#presentation" className="text-base font-medium text-[#3150f8] hover:text-gray-900">Qui sommes-nous ?</a>
+          <a href="#activites" className="text-base font-medium text-[#3150f8] hover:text-gray-900">Activités</a>
             <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-gray-900' : 'text-gray-500',
+                      open ? 'text-[#3150f8]' : 'text-gray-500',
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
-                    <span>Métiers</span>
+                    <span className='text-[#3150f8]'>Métiers</span>
                     <ChevronDownIcon
                       className={classNames(
-                        open ? 'text-gray-600' : 'text-gray-400',
+                        open ? 'text-[#3150f8]' : 'text-gray-400',
                         'ml-2 h-5 w-5 group-hover:text-gray-500'
                       )}
                       aria-hidden="true"
@@ -106,10 +106,10 @@ export default function Header() {
                 </>
               )}
             </Popover>
-            <a href="#contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="#contact" className="text-base font-medium text-[#3150f8] hover:text-gray-900">
               Contact
             </a>
-            <NavLink to="/carrieres" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <NavLink to="/carrieres" className="text-base font-medium text-[#3150f8] hover:text-gray-900">
               Carrières
             </NavLink>
           </Popover.Group>

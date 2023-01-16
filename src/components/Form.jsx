@@ -12,6 +12,8 @@ export default function Form (){
               votre demande à l'aide du formulaire ci-dessous
             </p>
           </div>
+          <form name="contact" method="post" data-netlify="true" onSubmit="submit">
+          <input type="hidden" name="form-name" value="contact" />
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-1/2">
@@ -96,12 +98,13 @@ export default function Form (){
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button className="flex mx-auto text-white bg-[#3150f8] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                <button type="submit" className="flex mx-auto text-white bg-[#3150f8] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                   Envoyer
                 </button>
               </div>
             </div>
           </div>
+          </form>
         </div>
       </section>
     </div>

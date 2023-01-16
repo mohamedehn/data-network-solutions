@@ -49,7 +49,7 @@ export default function Works() {
                     <feature.icon className="h-8 w-8" aria-hidden="true" />
                   </div>
                   <div className="sm:min-w-0 sm:flex-1">
-                    <p className="text-lg font-semibold leading-8 text-gray-900">{feature.name}</p>
+                    <p className="text-xl font-semibold leading-8 text-gray-900">{feature.name}</p>
                     <p className="mt-2 text-base leading-7 text-gray-600">{feature.description}</p>
                   </div>
                 </div>
