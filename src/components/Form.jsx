@@ -12,7 +12,7 @@ export default function Form (){
               votre demande à l'aide du formulaire ci-dessous
             </p>
           </div>
-          <form name="contact" method="post" data-netlify="true" encType="multipart/form-data" action="/pages/Success/">
+          <form name="contact" method="post" data-netlify="true" encType="multipart/form-data" action="/pages/success/">
           <input type="hidden" name="form-name" value="contact" />
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
             <div className="flex flex-wrap -m-2">
