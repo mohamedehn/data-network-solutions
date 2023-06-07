@@ -13,11 +13,20 @@ import Distribution from './components/Distribution';
 import Form from './components/Form';
 import ScrollToTop from './components/ScrollToTop'
 import Adress from './components/Adress';
+import { useEffect } from 'react';
+import PopUpCookies from './components/PopUpCookies';
+
 
 function App() {
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[]);
+
   return (
     <div className="App">
       <Header/>
+      <PopUpCookies/>
       <Hero/>
       <Presentation/>
       <Activities/>

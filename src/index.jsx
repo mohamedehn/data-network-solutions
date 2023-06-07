@@ -9,8 +9,9 @@ import Mentions from './pages/Mentions';
 import Job from './pages/Job';
 import Error from './pages/Error';
 import Success from './pages/Success';
+import Cookies from "./pages/Cookies"
 
-
+// @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -22,6 +23,7 @@ root.render(
           <Route path="/job/:id" element={<Job/>}/>
           <Route path="*" element={<Error/>}/>
           <Route path="/success" element={<Success/>}/>
+          <Route path="/cookies" element={<Cookies/>}/>
         </Routes>
       </Router>
   </React.StrictMode>

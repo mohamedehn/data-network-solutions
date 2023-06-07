@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import React from "react";
 
 export default function Footer (){
 
@@ -8,13 +9,8 @@ export default function Footer (){
             name: 'Mentions légales'
         },
         {
-            href: '/carrieres',
-            name: 'Carrières'
-        },
-
-        {
-            href: '#contact',
-            name: 'Contact'
+            href: '/cookies',
+            name: 'Cookies'
         },
     ]
 
@@ -22,7 +18,7 @@ export default function Footer (){
         <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto">
             <div className="mt-8 items-center justify-between sm:flex">
                 <div className="mt-4 sm:mt-0">
-                    &copy; 2022 Data Network Solutions Tout droit réservé.
+                    &copy; 2023 Data Network Solutions Tous droits réservés.
                 </div>
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-4">
@@ -52,7 +48,7 @@ export default function Footer (){
                         </li>
                     </ul>
                 </div>
-                <ul className="items-center justify-center space-y-5 sm:flex sm:space-x-4 sm:space-y-0 ">
+                <ul className="items-center justify-center space-y-5 sm:flex sm:space-x-4 sm:space-y-0 pt-[10px]">
                 {
                     footerNavs.map((item, idx) => (
                         <li className=" hover:text-gray-800" key={idx}>
@@ -63,11 +59,13 @@ export default function Footer (){
                     ))
                 }
                     <li className="hover:text-gray-800 list-none"> 
-                        <a href="https://mohamedehn.github.io/my-portfolio/">Powered by Digital Comet</a>
+                        <a href="https://mohamedehn.github.io/portfolio/">Powered by Coding Corp</a>
                     </li>
                 </ul>
             </div>
-            <style jsx="true">{`
+            <style 
+// @ts-ignore
+            jsx="true">{`
                 .svg-icon path,
                 .svg-icon polygon,
                 .svg-icon rect {

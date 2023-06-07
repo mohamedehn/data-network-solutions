@@ -1,3 +1,5 @@
+import React from "react"
+
 export default function Adress () {
     return(
 <div className="container my-24 px-6 mx-auto">
@@ -7,7 +9,7 @@ export default function Adress () {
       <div className="flex flex-wrap items-center">
         <div className="grow-0 shrink-0 basis-auto block w-full lg:flex lg:w-6/12 xl:w-4/12">
           <div className="map-container-2 w-full">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.704908212119!2d4.866950094226158!3d45.77710385392121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x6ef627cb78eb876d%3A0xe0d5ab68b03f6b9f!2sData%20Network%20Solutions!5e0!3m2!1sfr!2sus!4v1671809890307!5m2!1sfr!2sus" width="100%" height="450" frameBorder="0" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="map"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2785.786030803332!2d4.9320224999999995!3d45.7153292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c3e6e59a50ed%3A0xfcd315d503f2c978!2s333%20Cr%20du%203%C2%B0%20Mill%C3%A9naire%2C%2069800%20Saint-Priest!5e0!3m2!1sfr!2sfr!4v1686170740409!5m2!1sfr!2sfr" width="100%" height="450" frameBorder="0" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="map"></iframe>
           </div>
         </div>
         <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
@@ -31,7 +33,7 @@ export default function Adress () {
             <div className="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 lg:w-full xl:w-6/12 px-3 md:px-6 xl:px-12">
               <div className="flex align-start">
                 <div className="shrink-0">
-                  <div className="p-4 bg-blue-600 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
+                  <div className="p-4 bg-blue-500 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper" className="w-5 text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                       <path fill="currentColor" d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z">
                       </path>
@@ -40,8 +42,8 @@ export default function Adress () {
                 </div>
                 <div className="grow ml-6">
                   <p className="font-bold mb-1">Adresse</p>
-                  <p className="text-gray-500">40 Rue de Bruxelles</p>
-                  <p className="text-gray-500">69100 Villeurbanne</p>
+                  <p className="text-gray-500">333 Cours du 3ème Millénaire</p>
+                  <p className="text-gray-500">69800 Saint-Priest</p>
                 </div>
               </div>
             </div>
@@ -49,7 +51,7 @@ export default function Adress () {
               <a href="mailto:contact@datanetworksolutions.fr">
                 <div className="flex align-start">
                   <div className="shrink-0">
-                    <div className="p-4 bg-blue-600 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
+                    <div className="p-4 bg-blue-500 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
                       <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper" className="w-5 text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path fill="currentColor" d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z">
                         </path>

@@ -5,6 +5,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 //import "../styles/Header.css"
 import logo from "../assets/logo.png"
 import { NavLink } from 'react-router-dom'
+import React from 'react'
 
 const solutions = [
   {
@@ -36,7 +37,7 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-    <Popover className="relative bg-white">
+    <Popover className="relative bg-white z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -53,21 +54,21 @@ export default function Header() {
           </div>
           
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-          <a href="#presentation" className="text-base font-medium text-[#3150f8] hover:text-gray-900">Qui sommes-nous ?</a>
-          <a href="#activites" className="text-base font-medium text-[#3150f8] hover:text-gray-900">Activités</a>
+          <a href="#presentation" className="text-base font-medium text-blue-600 hover:text-gray-900">Qui sommes-nous ?</a>
+          <a href="#activites" className="text-base font-medium text-blue-600 hover:text-gray-900">Activités</a>
             <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-[#3150f8]' : 'text-gray-500',
+                      open ? 'text-blue-600' : 'text-gray-500',
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
                     <span className='text-[#3150f8]'>Métiers</span>
                     <ChevronDownIcon
                       className={classNames(
-                        open ? 'text-[#3150f8]' : 'text-gray-400',
+                        open ? 'text-blue-600' : 'text-gray-400',
                         'ml-2 h-5 w-5 group-hover:text-gray-500'
                       )}
                       aria-hidden="true"
@@ -106,10 +107,10 @@ export default function Header() {
                 </>
               )}
             </Popover>
-            <a href="#contact" className="text-base font-medium text-[#3150f8] hover:text-gray-900">
+            <a href="#contact" className="text-base font-medium text-blue-600 hover:text-gray-900">
               Contact
             </a>
-            <NavLink to="/carrieres" className="text-base font-medium text-[#3150f8] hover:text-gray-900">
+            <NavLink to="/carrieres" className="text-base font-medium text-blue-600 hover:text-gray-900">
               Carrières
             </NavLink>
           </Popover.Group>
@@ -147,7 +148,7 @@ export default function Header() {
                       href={item.href}
                       className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                     >
-                      <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
+                      <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
                       <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                     </a>
                   ))}

@@ -1,4 +1,5 @@
-import { ClipboardDocumentListIcon, UserGroupIcon, GlobeAltIcon, Cog6ToothIcon } from '@heroicons/react/24/outline'
+import { ClipboardDocumentListIcon, UserGroupIcon, GlobeAltIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
+import React from 'react';
 
 const features = [
   {
@@ -32,7 +33,7 @@ export default function Works() {
     <div className="bg-white pb-8 sm:py-32 lg:py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="sm:text-center">
-          <h2 className="text-3xl font-semibold leading-8 text-[#3150f8]">Nos métiers</h2>
+          <h2 className="text-3xl font-semibold leading-8 text-blue-500 ">Nos métiers</h2>
           <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Au coeur de la convergence numérique</p>
           {/* <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
@@ -45,7 +46,7 @@ export default function Works() {
             {features.map((feature) => (
               <a href={feature.href} key={feature.name}>
                 <div key={feature.name} className="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#3150f8] text-white sm:shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500 text-white sm:shrink-0">
                     <feature.icon className="h-8 w-8" aria-hidden="true" />
                   </div>
                   <div className="sm:min-w-0 sm:flex-1">

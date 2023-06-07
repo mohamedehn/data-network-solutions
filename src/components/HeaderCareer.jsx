@@ -3,7 +3,8 @@ import { Popover, Transition } from '@headlessui/react'
 //import "../styles/Header.css"
 import logo from "../assets/logo.png"
 import { NavLink } from 'react-router-dom'
-import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
+import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline';
+import React from 'react';
 
 // function classNames(...classes) {
 //    return classes.filter(Boolean).join(' ')
@@ -21,7 +22,7 @@ export default function HeaderCareer() {
             </NavLink>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button> 
@@ -79,13 +80,13 @@ export default function HeaderCareer() {
               )}
             </Popover>
 
-            <NavLink to="/" className="text-base font-medium text-[#3150f8] hover:text-gray-900">
+            <NavLink to="/" className="text-base font-medium text-blue-500  hover:text-gray-900">
               Accueil
             </NavLink>
-            <a href="#contact" className="text-base font-medium text-[#3150f8] hover:text-gray-900">
+            <a href="#contact" className="text-base font-medium text-blue-500  hover:text-gray-900">
               Contact
             </a>
-            <NavLink to="/carrieres" className="text-base font-medium text-[#3150f8] hover:text-gray-900">
+            <NavLink to="/carrieres" className="text-base font-medium text-blue-500  hover:text-gray-900">
               Carrières
             </NavLink>
           </Popover.Group>
@@ -109,7 +110,7 @@ export default function HeaderCareer() {
                   <img className="h-12 w-auto" src={logo} alt="Your Company"/>
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>

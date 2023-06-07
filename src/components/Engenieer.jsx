@@ -1,5 +1,6 @@
 import Lottie from "react-lottie";
-import animation from "../animations/86098-engineering-manager.json"
+import animation from "../animations/86098-engineering-manager.json";
+import React from "react";
 
 export default function Engenieer (){
    
@@ -20,7 +21,7 @@ export default function Engenieer (){
             </div>
             <div className="max-w-xl">
                 <div className="py-4 md:my-28">
-                    <h3 className="text-3xl text-[#3150f8] font-semibold md:text-4xl">
+                    <h3 className="text-3xl text-blue-500  font-semibold md:text-4xl">
                         Ingénierie
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3 text-justify">
@@ -32,7 +33,9 @@ export default function Engenieer (){
                     </p>
                 </div>
             </div>
-            <style jsx="true">{`
+            <style 
+// @ts-ignore
+            jsx="true">{`
                 .cta-pr-btn:hover svg {
                     transform: translateX(5px)
                 }

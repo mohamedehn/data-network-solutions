@@ -1,5 +1,6 @@
 import Lottie from "react-lottie";
-import animation from "../animations/34533-business-team.json"
+import animation from "../animations/34533-business-team.json";
+import React from "react";
 
 export default function Presentation (){
    
@@ -14,10 +15,10 @@ export default function Presentation (){
      };
 
     return (
-        <section className="max-w-screen-xl mx-auto py-4 px-4 sm:px-8 md:flex block justify-between">
+        <section className="max-w-screen-xl mx-auto py-4 px-4 sm:px-8 md:flex block justify-between sm:pt-52 pt-[18rem]">
             <div className="max-w-xl">
                 <div className="py-4 my-28">
-                    <h3 className="text-3xl text-[#3150f8] font-semibold md:text-4xl" id="presentation">
+                    <h3 className="text-3xl text-blue-500 font-semibold md:text-4xl" id="presentation">
                         Le Groupe DNS <span className="text-gray-800"> <br/>Votre tremplin vers l’entreprise de demain.</span>
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3 text-justify">
@@ -36,7 +37,9 @@ export default function Presentation (){
             <div className="max-w-xl self-center md:w-full w-auto">
                 <Lottie options={defaultOptions}/>
             </div>
-            <style jsx="true">{`
+            <style 
+// @ts-ignore
+            jsx="true">{`
                 .cta-pr-btn:hover svg {
                     transform: translateX(5px)
                 }
