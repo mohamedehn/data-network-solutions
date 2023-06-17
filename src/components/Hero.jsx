@@ -3,6 +3,8 @@ import React from "react";
 
 export default function Hero() {
 
+  
+
   return (
     <div className="bg-white h-[90vh]">
       <main>

@@ -2,40 +2,149 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ClipboardDocumentListIcon, UserGroupIcon, GlobeAltIcon, Cog6ToothIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-//import "../styles/Header.css"
+import React, { useState } from 'react';
 import logo from "../assets/logo.png"
 import { NavLink } from 'react-router-dom'
-import React from 'react'
 
-const solutions = [
-  {
-    name: 'Conseil et Audit',
-    description: 'Ensemble, nous trouverons les solutions à vos défis.',
-    href: '#conseil',
-    icon: UserGroupIcon,
-  },
-  {
-    name: 'Ingénierie',
-    description: 'Connaissances approfondies de votre secteur, expertise dans votre domaine de compétences et convictions sur les actions à mener.',
-    href: '#ingenierie',
-    icon: Cog6ToothIcon,
-  },
-  { name: 'Consulting', 
-    description: "Nous vous accompagnons de bout en bout dans vos projets.", 
-    href: '#consulting', icon: ClipboardDocumentListIcon },
-  {
-    name: 'Distribution',
-    description: "DNS Distribution fournit la technologie dont les entreprises ont besoin",
-    href: '#distribution',
-    icon: GlobeAltIcon,
-  },
-]
+// const solutions = [
+//   {
+//     name: 'Conseil et Audit',
+//     description: 'Ensemble, nous trouverons les solutions à vos défis.',
+//     href: '#conseil',
+//     icon: UserGroupIcon,
+//   },
+//   {
+//     name: 'Ingénierie',
+//     description: 'Connaissances approfondies de votre secteur, expertise dans votre domaine de compétences et convictions sur les actions à mener.',
+//     href: '#ingenierie',
+//     icon: Cog6ToothIcon,
+//   },
+//   { name: 'Consulting', 
+//     description: "Nous vous accompagnons de bout en bout dans vos projets.", 
+//     href: '#consulting', icon: ClipboardDocumentListIcon },
+//   {
+//     name: 'Distribution',
+//     description: "DNS Distribution fournit la technologie dont les entreprises ont besoin",
+//     href: '#distribution',
+//     icon: GlobeAltIcon,
+//   },
+// ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Header() {
+
+  const [lang, setLang] = useState('fr');
+  const [text, setText] = useState({
+    company: 'Votre entreprise',
+    about: 'Qui sommes-nous ?',
+    activities: 'Activités',
+    careers: 'Carrières',
+    contact: 'Contact',
+    solutions: [
+      {
+        name: 'Conseil et Audit',
+        description: 'Ensemble, nous trouverons les solutions à vos défis.',
+        href: '#conseil',
+        icon: UserGroupIcon,
+      },
+      {
+        name: 'Ingénierie',
+        description: 'Connaissances approfondies de votre secteur, expertise dans votre domaine de compétences et convictions sur les actions à mener.',
+        href: '#ingenierie',
+        icon: Cog6ToothIcon,
+      },
+      {
+        name: 'Consulting',
+        description: 'Nous vous accompagnons de bout en bout dans vos projets.',
+        href: '#consulting',
+        icon: ClipboardDocumentListIcon,
+      },
+      {
+        name: 'Distribution',
+        description: 'DNS Distribution fournit la technologie dont les entreprises ont besoin',
+        href: '#distribution',
+        icon: GlobeAltIcon,
+      },
+    ],
+  });
+
+  const changeLanguage = () => {
+    if (lang === 'fr') {
+      setLang('en');
+      setText({
+        company: 'Your Company',
+        about: 'About Us',
+        activities: 'Activities',
+        careers: 'Careers',
+        contact: 'Contact',
+        solutions: [
+          {
+            name: 'Consulting and Audit',
+            description: 'Together, we will find solutions to your challenges.',
+            href: '#consulting',
+            icon: UserGroupIcon,
+          },
+          {
+            name: 'Engineering',
+            description: 'In-depth knowledge of your industry, expertise in your field, and strong beliefs in the actions to be taken.',
+            href: '#engineering',
+            icon: Cog6ToothIcon,
+          },
+          {
+            name: 'Consulting',
+            description: 'We accompany you from start to finish in your projects.',
+            href: '#consulting',
+            icon: ClipboardDocumentListIcon,
+          },
+          {
+            name: 'Distribution',
+            description: 'DNS Distribution provides the technology that businesses need',
+            href: '#distribution',
+            icon: GlobeAltIcon,
+          },
+        ],
+      });
+    } else {
+      setLang('fr');
+      setText({
+        company: 'Votre entreprise',
+        about: 'Qui sommes-nous ?',
+        activities: 'Activités',
+        careers: 'Carrières',
+        contact: 'Contact',
+        solutions: [
+          {
+            name: 'Conseil et Audit',
+            description: 'Ensemble, nous trouverons les solutions à vos défis.',
+            href: '#conseil',
+            icon: UserGroupIcon,
+          },
+          {
+            name: 'Ingénierie',
+            description: 'Connaissances approfondies de votre secteur, expertise dans votre domaine de compétences et convictions sur les actions à mener.',
+            href: '#ingenierie',
+            icon: Cog6ToothIcon,
+          },
+          {
+            name: 'Consulting',
+            description: 'Nous vous accompagnons de bout en bout dans vos projets.',
+            href: '#consulting',
+            icon: ClipboardDocumentListIcon,
+          },
+          {
+            name: 'Distribution',
+            description: 'DNS Distribution fournit la technologie dont les entreprises ont besoin',
+            href: '#distribution',
+            icon: GlobeAltIcon,
+          },
+        ],
+      });
+    }
+  };
+
   return (
     <Popover className="relative bg-white z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -45,6 +154,8 @@ export default function Header() {
               {/* <span className="sr-only">Your Company</span> */}
               <img className="h-14 w-auto sm:h-16" src={logo} alt=""/>
             </NavLink>
+            <button onClick={changeLanguage}>Changer de langue</button>
+
           </div>
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -54,8 +165,8 @@ export default function Header() {
           </div>
           
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-          <a href="#presentation" className="text-base font-medium text-blue-600 hover:text-gray-900">Qui sommes-nous ?</a>
-          <a href="#activites" className="text-base font-medium text-blue-600 hover:text-gray-900">Activités</a>
+          <a href="#presentation" className="text-base font-medium text-blue-600 hover:text-gray-900">{lang === 'fr' ? 'Qui sommes-nous ?' : 'About Us'}</a>
+          <a href="#activites" className="text-base font-medium text-blue-600 hover:text-gray-900">{lang === 'fr' ? 'Activités' : 'Activities'}</a>
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -87,7 +198,7 @@ export default function Header() {
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          {solutions.map((item) => (
+                          {text.solutions.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
@@ -142,7 +253,7 @@ export default function Header() {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {solutions.map((item) => (
+                  {text.solutions.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
