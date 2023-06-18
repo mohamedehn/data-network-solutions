@@ -9,11 +9,15 @@ import Mentions from './pages/Mentions';
 import Job from './pages/Job';
 import Error from './pages/Error';
 import Success from './pages/Success';
-import Cookies from "./pages/Cookies"
+import Cookies from "./pages/Cookies";
+import store from './app/store'
+import { Provider } from 'react-redux'
+
 
 // @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
   <React.StrictMode>
     <Router>
         <Routes>
@@ -27,6 +31,7 @@ root.render(
         </Routes>
       </Router>
   </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
