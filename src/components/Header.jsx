@@ -1,10 +1,12 @@
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { ClipboardDocumentListIcon, UserGroupIcon, GlobeAltIcon, Cog6ToothIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
+import { ClipboardDocumentListIcon, UserGroupIcon, GlobeAltIcon, Cog6ToothIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import React, { useState } from 'react';
-import logo from "../assets/logo.png"
-import { NavLink } from 'react-router-dom'
+import logo from "../assets/logo.png";
+import { NavLink } from 'react-router-dom';
+// import { useDispatch } from 'react-redux';
+// import { changeLanguage } from '../app/actions';
 
 
 function classNames(...classes) {
@@ -12,6 +14,7 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+
 
   const [lang, setLang] = useState('fr');
   const [text, setText] = useState({

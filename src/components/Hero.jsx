@@ -1,13 +1,9 @@
 import React from "react";
-import { connect } from 'react-redux';
-import { changeLanguage } from '../app/actions';
-
 
 
 export default function Hero() {
 
   
-
   return (
     <div className="bg-white h-[90vh]">
       <main>
