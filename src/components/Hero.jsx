@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 
 export default function Hero() {
 
+  const { t } = useTranslation();
   
   return (
     <div className="bg-white h-[90vh]">
@@ -53,14 +55,14 @@ export default function Hero() {
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">IT - TELECOM - ENGINEERING</p>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                  L'étape la plus importante pour une entreprise, est de passer à la suivante.
+                    {t("hero_title")}
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
                       href="#contact"
                       className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
-                      Contactez-nous
+                      {t("hero_contact")}
                     </a>
                   </div>
                 </div>
