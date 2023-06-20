@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import{BrowserRouter as Router, Route, Routes} from 'react-router-dom'
@@ -31,13 +31,13 @@ i18n
     backend : {
       loadPath: '/assets/locales/{{lng}}/translation.json',
     },
-    react : {useSuspense : false}
   });
 
 
 // @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Suspense>
   <React.StrictMode>
     <Router> 
         <Routes>
@@ -51,6 +51,7 @@ root.render(
         </Routes>
       </Router>
   </React.StrictMode>
+  </Suspense>
 );
 
 // If you want to start measuring performance in your app, pass a function

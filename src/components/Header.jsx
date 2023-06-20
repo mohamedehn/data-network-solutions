@@ -6,8 +6,6 @@ import React from 'react';
 import logo from "../assets/logo.png";
 import { NavLink } from 'react-router-dom';
 import i18next from 'i18next';
-// import { useDispatch } from 'react-redux';
-// import { changeLanguage } from '../app/actions';
 
 
 function classNames(...classes) {
@@ -15,9 +13,24 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+  //function pour vérifier la valeur du cookie i18 next
+  function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(';');
+    
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      
+      if (cookie.startsWith(cookieName + '=')) {
+        return cookie.substring(cookieName.length + 1);
+      }
+    }
+    
+    return null;
+  };
 
-  
-  
+  const i18nextCookieValue = getCookieValue('i18next');
+
+
 
   const languages = [
     {
@@ -31,7 +44,6 @@ export default function Header() {
       flag : <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 216.156 107.929"><g fillRule="evenodd" clipRule="evenodd" strokeWidth=".216" strokeMiterlimit="2.613"><path fill="#2c6698" stroke="#000" d="M.396.251h214.92v107.065H.396V.251z"/><path d="M128.268 75.275l65.16 32.4h22.033V97.02l-53.568-25.703-33.625-.145v4.103zM87.444 75.42l-65.16 32.4H.252V97.164L53.82 71.459l33.624-.143v4.104zM128.484 32.795l65.232-32.4h22.031v10.656l-53.641 25.704-33.622.145v-4.105zM87.373 32.795L22.14.396H.108v10.656l53.64 25.704 33.625.144v-4.105z" fill="#fff" stroke="#fff"/><path fill="#fff" stroke="#fff" d="M.468 36.18h214.848v35.064H.468V36.18z"/><path fill="#fff" stroke="#fff" d="M87.516.468h40.681v106.921H87.516V.468z"/><path fill="#b01842" stroke="#b01842" d="M95.004.108h25.705v107.281H95.004V.108zM.252 107.389L71.82 71.604h15.696l-72 36.072s-15.264 0-15.264-.287zM128.771 36.251L200.484.323h15.623l-71.711 35.928s-15.625.289-15.625 0zM.612 8.388l58.104 27.936H73.62L.684 2.339S.612 9.108.612 8.388zM215.172 100.26l-58.607-28.943-15.768-.072 74.375 36.287v-7.272z"/><path d="M128.053 33.156l1.152-.216-1.008 4.319s0-3.96-.144-4.103z" fill="#fff" stroke="#fff"/><path fill="#b01842" stroke="#b01842" d="M.468 44.459h214.848V63.18H.468V44.459z"/></g></svg>
     }
   ]
-
 
   const text = ({
     company: 'Votre entreprise',
@@ -67,6 +79,41 @@ export default function Header() {
     ],
   });
 
+  const textEn = ({
+   
+    company: 'Your Company',
+    about: 'About Us',
+    activities: 'Activities',
+    careers: 'Careers',
+    contact: 'Contact',
+    solutions: [
+          {
+            name: 'Consulting and Audit',
+            description: 'Together, we will find solutions to your challenges.',
+            href: '#consulting',
+            icon: UserGroupIcon,
+          },
+          {
+            name: 'Engineering',
+            description: 'In-depth knowledge of your industry, expertise in your field, and strong beliefs in the actions to be taken.',
+            href: '#engineering',
+            icon: Cog6ToothIcon,
+          },
+          {
+            name: 'Consulting',
+            description: 'We accompany you from start to finish in your projects.',
+            href: '#consulting',
+            icon: ClipboardDocumentListIcon,
+          },
+          {
+            name: 'Distribution',
+            description: 'DNS Distribution provides the technology that businesses need',
+            href: '#distribution',
+            icon: GlobeAltIcon,
+          },
+    ],
+  });
+
   
   return (
     <Popover className="relative bg-white z-50">
@@ -86,8 +133,12 @@ export default function Header() {
           </div>
           
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-          <a href="#presentation" className="text-base font-medium text-blue-600 hover:text-gray-900">Qui sommes-nous ?</a>
-          <a href="#activites" className="text-base font-medium text-blue-600 hover:text-gray-900">Activités</a>
+            <a href="#presentation" className="text-base font-medium text-blue-600 hover:text-gray-900">{i18nextCookieValue === 'fr'?
+              "Qui sommes-nous ?" : "About us" }</a>
+            <a href="#activites" className="text-base font-medium text-blue-600 hover:text-gray-900">
+              {i18nextCookieValue === 'fr'?
+              "Activités" : "Activities" }
+            </a>
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -97,7 +148,7 @@ export default function Header() {
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
-                    <span className='text-[#3150f8]'>Métiers</span>
+                    <span className='text-[#3150f8]'>{i18nextCookieValue === 'fr'? "Métiers" : "Scopes" }</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-blue-600' : 'text-gray-400',
@@ -119,7 +170,7 @@ export default function Header() {
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          {text.solutions.map((item) => (
+                          { i18nextCookieValue === 'fr'  ? text.solutions.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
@@ -131,7 +182,21 @@ export default function Header() {
                                 <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                               </div>
                             </a>
-                          ))}
+                          )) :
+                          textEn.solutions.map((item) => (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                            >
+                              <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
+                              <div className="ml-4">
+                                <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                              </div>
+                            </a>
+                          )) 
+                        }
                         </div>
                       </div>
                     </Popover.Panel>
@@ -143,11 +208,14 @@ export default function Header() {
               Contact
             </a>
             <NavLink to="/carrieres" className="text-base font-medium text-blue-600 hover:text-gray-900">
-              Carrières
+                {i18nextCookieValue === 'fr'? "Carrières" : "Careers" }
             </NavLink>
-            { languages.map(({code, flag, name})=>(
-                  <button onClick={()=> i18next.changeLanguage(code)} className='flex'>{flag}</button>
-            )) }
+            {languages.map(({ code, flag, name }) => (
+              <button onClick={() => {
+                i18next.changeLanguage(code);
+                window.location.reload();
+              }} className='flex'>{flag}</button>
+            ))}
           </Popover.Group>
         </div>
       </div>
@@ -174,22 +242,42 @@ export default function Header() {
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                   { languages.map(({code, name, flag})=>(
-                  <button onClick={()=> i18next.changeLanguage(code)} className='flex'> {flag}</button>
-                    )) }
+                    <button onClick={() => {
+                      i18next.changeLanguage(code);
+                      window.location.reload();
+                    }} className='flex'>{flag}</button>
+                  ))}
                 </div>
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {text.solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
-                    >
-                      <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
-                      <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                    </a>
-                  ))}
+                    { i18nextCookieValue === 'fr'  ? text.solutions.map((item) => (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                            >
+                              <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
+                              <div className="ml-4">
+                                <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                              </div>
+                            </a>
+                          )) :
+                          textEn.solutions.map((item) => (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                            >
+                              <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
+                              <div className="ml-4">
+                                <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                              </div>
+                            </a>
+                          )) 
+                      }
                 </nav>
               </div>
             </div>

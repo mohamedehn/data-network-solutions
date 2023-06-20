@@ -14,19 +14,34 @@ export default function Conseil (){
         },
      };
 
+     //function pour vérifier la valeur du cookie i18 next
+function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(';');
+    
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      
+      if (cookie.startsWith(cookieName + '=')) {
+        return cookie.substring(cookieName.length + 1);
+      }
+    }
+    
+    return null;
+  };
+  
+  const i18nextCookieValue = getCookieValue('i18next');
+
     return (
         <section className="max-w-screen-xl mx-auto py-8 px-4 sm:px-8 md:flex block justify-between" id="conseil">
             <div className="max-w-xl">
                 <div className="py-4 md:my-28">
                     <h3 className="text-3xl text-blue-500  font-semibold md:text-4xl">
-                        Conseil & Audit
+                        {i18nextCookieValue === 'fr'? "Conseil & Audit" : "Consulting & Auditing"}
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3 text-justify">
-                    Une équipe d’experts en conseil & audit est à votre écoute afin d’auditer vos organisations et vos besoins, étudier vos marchés, 
-                    évaluer les opportunités & menaces, élaborer une stratégie correspondant à votre vision en pilotant la mise en œuvre des 
-                    solutions, et enfin analyser les résultats en vous remettant un rapport détaillé et ciblé.En intervenant dans nos différents 
-                    domaines de compétences, nos experts sauront vous orienter vers les meilleures solutions et assureront l’atteinte de vos 
-                    objectifs dans une démarche de confiance et d’excellence. Ensemble, nous trouverons les solutions à vos défis les plus relevés !
+                        {i18nextCookieValue === 'fr'? "Une équipe d’experts en conseil & audit est à votre écoute afin d’auditer vos organisations et vos besoins, étudier vos marchés, évaluer les opportunités & menaces, élaborer une stratégie correspondant à votre vision en pilotant la mise en œuvre des solutions, et enfin analyser les résultats en vous remettant un rapport détaillé et ciblé.En intervenant dans nos différents domaines de compétences, nos experts sauront vous orienter vers les meilleures solutions et assureront l’atteinte de vos objectifs dans une démarche de confiance et d’excellence. Ensemble, nous trouverons les solutions à vos défis les plus relevés !" 
+                        
+                        : "A team of consulting and auditing experts is at your disposal to audit your organizations and needs, study your markets, evaluate opportunities and threats, develop a strategy aligned with your vision by managing the implementation of solutions, and finally analyze the results by providing you with a detailed and targeted report. By intervening in our various areas of expertise, our experts will guide you towards the best solutions and ensure the achievement of your objectives in a trusted and excellent manner. Together, we will find the solutions to your most challenging challenges!"}
                     </p>
                 </div>
             </div>
