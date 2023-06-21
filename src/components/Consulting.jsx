@@ -14,6 +14,23 @@ export default function Consulting (){
         },
      };
 
+     //function pour vérifier la valeur du cookie i18 next
+    function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(';');
+    
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      
+      if (cookie.startsWith(cookieName + '=')) {
+        return cookie.substring(cookieName.length + 1);
+      }
+    }
+    
+    return null;
+  };
+  
+    const i18nextCookieValue = getCookieValue('i18next');
+
     return (
         <section className="max-w-screen-xl mx-auto py-2 px-4 sm:px-8 md:flex block justify-between" id="consulting">
             <div className="max-w-xl">
@@ -22,14 +39,10 @@ export default function Consulting (){
                         Consulting
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3 text-justify">
-                    Nos équipes de consultants mettent leur expertise du monde des réseaux et des énergies au service de la conception et du suivi 
-                    de projets d’ingénierie pour vous offrir le meilleur de la connectivité. Nous vous accompagnons de bout en bout dans vos projets. 
-                    Nous vous conseillons sur les solutions technologiques adéquates, anticipons avec vous les sujets d’avenir et vous soutenons dans 
-                    vos projets de gestion de parcs et d’infrastructures dans le but de développer vos activités et réaliser vos projets de 
-                    déploiement. Notre savoir-faire technique associé à notre connaissance des marchés et des opérateurs nous permet de vous proposer
-                    des solutions durables et adaptées. Notre savoir-faire relationnel nous garantit de tisser des liens de confiance avec notre 
-                    communauté de clients et de partenaires. Nos équipes transforment ces multiples compétences en valeur ajoutée pour chacun 
-                    d’entre vous.
+                        {i18nextCookieValue === 'fr'? "Nos équipes de consultants mettent leur expertise du monde des réseaux et des énergies au service de la conception et du suivi de projets d’ingénierie pour vous offrir le meilleur de la connectivité. Nous vous accompagnons de bout en bout dans vos projets. Nous vous conseillons sur les solutions technologiques adéquates, anticipons avec vous les sujets d’avenir et vous soutenons dans vos projets de gestion de parcs et d’infrastructures dans le but de développer vos activités et réaliser vos projets de déploiement. Notre savoir-faire technique associé à notre connaissance des marchés et des opérateurs nous permet de vous proposer des solutions durables et adaptées. Notre savoir-faire relationnel nous garantit de tisser des liens de confiance avec notre communauté de clients et de partenaires. Nos équipes transforment ces multiples compétences en valeur ajoutée pour chacun d’entre vous." 
+
+                        : "Our team of consultants leverages their expertise in the networking and energy domains to assist in the design and project management of engineering projects, delivering the best in connectivity. We provide end-to-end support throughout your projects, advising on appropriate technological solutions, anticipating future trends, and assisting in the management of fleets and infrastructures to enhance your operations and realize your deployment projects. Our technical expertise, combined with our market and operator knowledge, enables us to offer sustainable and tailored solutions. Our strong interpersonal skills ensure the development of trust-based relationships with our community of clients and partners. Our teams transform these diverse skills into added value for each and every one of you."}
+                    
                     </p>
                 </div>
             </div>

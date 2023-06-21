@@ -29,6 +29,23 @@ export default function Form (){
     window.location.reload();
   };
 
+  //function pour vérifier la valeur du cookie i18 next
+  function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(';');
+    
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      
+      if (cookie.startsWith(cookieName + '=')) {
+        return cookie.substring(cookieName.length + 1);
+      }
+    }
+    
+    return null;
+  };
+  
+  const i18nextCookieValue = getCookieValue('i18next');
+
 
     return (
         <div>
@@ -36,7 +53,7 @@ export default function Form (){
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="text-3xl text-blue-500  font-semibold md:text-4xl">
-              Contactez-nous
+              {i18nextCookieValue === 'fr'? "Contactez-nous" : "Contact us"}
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
               Si vous souhaitez collaborer avec notre entreprise ou simplement obtenir des informations, n'hésitez pas à nous transmettre
