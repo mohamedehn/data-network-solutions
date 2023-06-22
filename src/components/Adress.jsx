@@ -1,6 +1,25 @@
 import React from "react"
 
 export default function Adress () {
+
+  //function pour vérifier la valeur du cookie i18 next
+  function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(';');
+    
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      
+      if (cookie.startsWith(cookieName + '=')) {
+        return cookie.substring(cookieName.length + 1);
+      }
+    }
+    
+    return null;
+  };
+
+  const i18nextCookieValue = getCookieValue('i18next');
+
+
     return(
 <div className="container my-24 px-6 mx-auto">
 
@@ -41,7 +60,7 @@ export default function Adress () {
                   </div>
                 </div>
                 <div className="grow ml-6">
-                  <p className="font-bold mb-1">Adresse</p>
+                  <p className="font-bold mb-1"> {i18nextCookieValue === 'fr'? 'Adresse' : "Adress"}</p>
                   <p className="text-gray-500">333 Cours du 3ème Millénaire</p>
                   <p className="text-gray-500">69800 Saint-Priest</p>
                 </div>

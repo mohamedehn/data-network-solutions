@@ -210,12 +210,17 @@ export default function Header() {
             <NavLink to="/carrieres" className="text-base font-medium text-blue-600 hover:text-gray-900">
                 {i18nextCookieValue === 'fr'? "Carrières" : "Careers" }
             </NavLink>
-            {languages.map(({ code, flag, name }) => (
-              <button onClick={() => {
-                i18next.changeLanguage(code);
-                window.location.reload();
-              }} className='flex'>{flag}</button>
-            ))}
+
+            <Popover as='nav'>
+              
+              {languages.map(({ code, flag, name }) => (
+                <button onClick={() => {
+                  i18next.changeLanguage(code);
+                  window.location.reload();
+                }} className='flex'>{flag}</button>
+              ))}
+            </Popover>
+
           </Popover.Group>
         </div>
       </div>

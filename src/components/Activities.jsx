@@ -38,16 +38,16 @@ export default function Activities () {
 
     const faqsListEn = [
         {
-            q: "IT Center",
-            a: "In the face of this digital era, where digital technology has become an essential tool that offers development opportunities as well as threats related to data security, it has become crucial for a company to benefit from high-performance IT solutions in order to remain competitive in its market and effectively protect its infrastructure. Our goal is to provide tailored solutions to each company, enabling the integration of increasingly intelligent technologies into organizations while ensuring optimal data security, with the aim of increasing revenue and facing competition. DATA, Cloud, AI, Hosting, Cybersecurity, and Web & Mobile Development are the main areas where our IT experts accompany you 24/7 on-site or remotely",
+            q: "IT Division",
+            a: "In the face of this digital era, where digital technology has become an essential tool that offers development opportunities as well as threats related to data security, it has become crucial for companies to benefit from high-performance IT solutions in order to remain competitive in the market while effectively protecting their infrastructure. Our goal is to provide you with tailored solutions, enabling the integration of increasingly intelligent technologies into your organizational structure while ensuring optimal data security, with the aim of increasing revenue and standing out among competitors. DATA, Cloud, AI, Hosting, Cybersecurity, and Web & Mobile Development are the main areas in which our IT experts will accompany you 24/7, on-site or remotely",
         },
         {
-            q: "Telecom Center",
-            a: "Nowadays, telecommunications have great importance and a crucial role in the functioning of a company, opening the way to multiple innovations and new business models. At the core of our business, our mission is to support operators, communities, and partner companies in the design, construction, and maintenance of the networks of the future, both fixed and mobile. From engineering to supervision to deployment, our FTTx, transmission, and mobile experts accompany you 24/7 on-site or remotely."
+            q: "Telecom Division",
+            a: "Nowadays, telecommunication is of great importance and plays a crucial role in the operation of companies, paving the way to plenty of innovation opportunities and new business models. At the core of our business, our mission is to support telecom providers, communities as well as partner companies with the design, building and maintenance of both tomorrow’s fixed & mobile networks. From engineering to supervision, including deployment, our FTTx, transmission, and mobile experts stand by your side 24/7, on-site or remotely."
         },
         {
-            q: "Energies Center",
-            a: "With the acceleration of digital transformation in companies and the massive deployment of next-generation networks, energy sources are increasingly being relied upon to meet growing consumption needs. Operators are undertaking major projects aimed at reducing the energy footprint of network installations and maximizing the use of renewable energy. Our mission is to support you in the field of energy transition and provide advice on an investment strategy in energy sources and carbon emissions control. Our energy efficiency experts have designed and developed hybrid solutions that integrate renewable energy into the energy value chain and optimize its utilization."
+            q: "Energy Division",
+            a: "With the acceleration of companies’ digital transformation and the massive deployment of next-generation networks, energy sources are increasingly being relied upon to meet growing consumption needs. To reduce the energy footprint of network installations and maximize the use of renewable energy, telecom providers are undertaking major projects that imply optimizing energy resources. In this context, our mission is to support you in the field of energy transition and provide advice on an investment strategy in energy sources and carbon emission management. Our energy efficiency experts have designed and developed hybrid solutions that integrate renewable energy into the energy value chain and optimize its use."
         },    
     ]
   
@@ -56,7 +56,7 @@ export default function Activities () {
             {/* <ScrollToTop/> */}
             <div className="space-y-3 text-center">
                 <h1 className="text-3xl text-blue-500  font-semibold">
-                    {i18nextCookieValue === 'fr'? "Nos domaines d'activités" : "Our activity fields"}
+                    {i18nextCookieValue === 'fr'? "Nos domaines d'activités" : "Our activities"}
                 </h1>
             </div>
             <div className="mt-14 gap-16 sm:grid sm:grid-cols-2 lg:grid-cols-3 text-justify">

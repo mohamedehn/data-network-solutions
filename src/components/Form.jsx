@@ -56,8 +56,11 @@ export default function Form (){
               {i18nextCookieValue === 'fr'? "Contactez-nous" : "Contact us"}
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Si vous souhaitez collaborer avec notre entreprise ou simplement obtenir des informations, n'hésitez pas à nous transmettre
-              votre demande à l'aide du formulaire ci-dessous
+
+              {i18nextCookieValue === 'fr' ? 
+              "Si vous souhaitez collaborer avec notre entreprise ou simplement obtenir des informations, n'hésitez pas à nous transmettre votre demande à l'aide du formulaire ci-dessous"
+              : 
+              "Please feel free to submit your request or inquire about collaborating with our company by using the form provided below."}
             </p>
           </div>
           <form name="contact" method="post" data-netlify="true" encType="multipart/form-data" action="../pages/Success/">
@@ -67,7 +70,7 @@ export default function Form (){
               <div className="p-2 w-1/2">
                 <div className="relative">
                   <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-                    Nom
+                     {i18nextCookieValue === 'fr'? 'Nom' : "Last Name"}
                   </label>
                   <input type="text" id="name" name="name" required
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-blue-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -77,7 +80,7 @@ export default function Form (){
               <div className="p-2 w-1/2">
                 <div className="relative">
                   <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-                    Prénom
+                    {i18nextCookieValue === 'fr'? 'Prénom' : "First Name"}
                   </label>
                   <input type="text" id="name" name="name" required
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-blue-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -101,7 +104,7 @@ export default function Form (){
               <div className="p-2 w-full">
                 <div className="relative">
                   <label htmlFor="tel" className="leading-7 text-sm text-gray-600">
-                    Téléphone
+                    {i18nextCookieValue === 'fr'? 'Téléphone' : "Phone"}
                   </label>
                   <input
                     type="number"
@@ -128,7 +131,7 @@ export default function Form (){
               <div className="p-2 w-full">
                 <div className="relative">
                   <label htmlFor="file" className="leading-7 text-sm text-gray-600 block">
-                    Pièce jointe
+                    {i18nextCookieValue === 'fr'? 'Pièce jointe' : "File"}
                   </label>
                   <input type="file" id="piece" name="file" className="bg-gray-100 rounded border w-full border-gray-300 focus:border-blue-500 h-10 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"/>
                 </div>
@@ -148,7 +151,7 @@ export default function Form (){
                     px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 
                     focus:ring-[#9aabb2] focus:ring-offset-2 sm:w-auto"
                   >
-                    Envoyer
+                    {i18nextCookieValue === 'fr'? 'Envoyer' : "Submit"}
                   </button> 
                   </div> :
                   <div>

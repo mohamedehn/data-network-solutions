@@ -80,7 +80,7 @@ const i18nextCookieValue = getCookieValue('i18next');
     <div className="bg-white pb-8 sm:py-32 lg:py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="sm:text-center">
-          <h2 className="text-3xl font-semibold leading-8 text-blue-500 ">{i18nextCookieValue === 'fr'? "Nos métiers" : "Our Jobs"}</h2>
+          <h2 className="text-3xl font-semibold leading-8 text-blue-500 ">{i18nextCookieValue === 'fr'? "Nos métiers" : "Our expertise"}</h2>
           <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {i18nextCookieValue === 'fr'? "Au coeur de la convergence numérique" : "At the heart of digital convergence"}
           </p>

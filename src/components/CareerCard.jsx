@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import posts from "../job.json"
+import React from "react"
 
 export default function CareerCard () {
 

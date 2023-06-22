@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "title": "Conducteur de travaux",
+        "intro" : "Le conducteur de travaux est celui qui planifie et contrôle les travaux de construction, ou d'aménagements paysagers. Il encadre une équipe de techniciens et d'ouvriers avec l'aide d'un ou plusieurs chefs de chantier.",
+        "desc": "Le conducteur de travaux est celui qui planifie et contrôle les travaux de construction, ou d'aménagements paysagers. Il encadre une équipe de techniciens et d'ouvriers avec l'aide d'un ou plusieurs chefs de chantier. Missions : Vous avez la responsabilité de la phase conception avec le Bureau d'études. Vous déterminez les meilleurs solutions techniques de création de Génie Civil (en trancheuse, par Forage, en Traditionnelle, en infrastructure aérienne...) adaptées à l'ingénierie Fibre optique. Vous réalisez les devis de travaux. Vous consultez les gestionnaires de voirie. Vous consultez et sélectionnez les fournisseurs et sous-traitants. Vous organisez et coordonnez les chantiers. Vous avez en charge la gestion financière des affaires. Vous faites les recettes et les livraisons de chantiers. Vous lancez la facturation et surveillez les créances.",
+        "missions": "Bac +2 à Bac +5 en travaux publics ou réseaux télécoms, avec une expérience significative sur un poste similaire. Savoirs et savoir-faire : Maîtrise de l'environnement Fibre Optique. Gestion et planification des travaux. Connaissances des normes et règlements de voiries. Bonne utilisation des outils informatiques. Savoir être : Réactivité. Organisation et logistique. Rigueur. Excellent relationnel clients. Compétences managériales",
+        "img": "https://f.hellowork.com/obs-static-images/seo/ObsJob/conducteur-de-travaux.jpg",
+        "authorName": "",
+        "date": "19 Décembre 2022"
+    },
+    {
+        "title": "Technicien mobile",
+        "intro": "Le Technicien Télécom en Réseaux Mobile s'occupe de déployer les techniques de communication radio mobile (3G, 4G, 5G, FH, …) Il a les savoirs et savoir-faire spécifiques à la création et à la maintenance des infrastructures et des équipements des réseaux mobiles des opérateurs.",
+        "desc" : "En tant que Technicien Télécom GSM, vos missions consisteront à : Installation et mise en service de faisceau hertzien sur les sites Télécom. Exploiter les notices techniques des fournisseurs et les documents/plan de déploiement des équipements fournis par le Bureau d'études ou le client. Réaliser les Mesures radio sur la chaine antennaire. Réaliser les interventions curatives sur les équipements radio, transmission et chaine antennaire. Réaliser les tests de communications pour l'opérateur suite aux mises en service. Contrôler la qualité et la conformité des travaux réalisés, réaliser les opérations de maintenance. Rendre compte des travaux réalisés en complétant avec précision les documents demandés (rapport d'intervention, feuilles d'heures, ...)",
+        "img": "http://www.sysoco.fr/wp-content/uploads/JBY-PPI-FH-Lecate-1022x1024.jpg",
+        "missions" : "Vous avez le goût du travail en équipe et en extérieur. Vous êtes rigoureux. Habilitations requises : travaux en hauteur, électriques B1V, B2V, BR & l’AIPR. Des déplacements sont à prévoir dans la région PACA (notamment 13 et 83)",
+        "authorName": "",
+        "date": "Jan 4 2022",
+        "id": "2"
+    },
+    {
+        "title": "Chef de projet",
+        "intro": "Le chef de projet télécoms est un ingénieur qui anime une équipe de professionnels aux compétences multiples pour réaliser un produit (projet multimédia et télécoms) qui leur est confié. Il joue le rôle d'une interface entre les équipes éditoriales et informatiques et doit maîtriser les délais et les coûts. C’est lui qui définit l'architecture globale d'un nouveau produit (téléphone portable, visiophone, par exemple) et supervise la production.",
+        "desc" : "Intégré(e) à l'équipe en charge du déploiement de l'ensemble de nos services opérateurs, vos missions seront de : Piloter, organiser, anticiper afin de mener à bien les projets. Gérer les ressources techniques et humaines. Assurer une bonne communication constante auprès des clients et des divers interlocuteurs. Suivre les process sans avoir peur de pouvoir en sortir.Reporter",
+        "img": "https://f.hellowork.com/obs-static-images/seo/ObsJob/responsable-telecoms.jpg",
+        "missions" : "Bac+4/5. Une connaissance du domaine télécom serait un plus. Autonomie, organisation, détermination, pugnacité, réflexion. Maîtrise des outils informatiques usuels (Pack Office) et web",
+        "authorName": "",
+        "date": "Jan 4 2022",
+        "id": "3"
+    }
+]

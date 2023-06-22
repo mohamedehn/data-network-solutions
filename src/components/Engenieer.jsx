@@ -39,12 +39,12 @@ export default function Engenieer (){
             <div className="max-w-xl">
                 <div className="py-4 md:my-28">
                     <h3 className="text-3xl text-blue-500  font-semibold md:text-4xl">
-                        {i18nextCookieValue === 'fr'? "Ingénierie" : "Engenieer"}
+                        {i18nextCookieValue === 'fr'? "Ingénierie" : "Engineering"}
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3 text-justify">
                         {i18nextCookieValue === 'fr'? "Notre équipe d’ingénieurs associent connaissances approfondies de votre secteur, expertise dans votre domaine de compétences et convictions sur les actions à mener. Ils vous accompagnent dans vos locaux ou bien à distance, de façon pragmatique et innovante pour dessiner votre avenir, réaliser vos objectifs et réussir la transformation de votre organisation. Passionnés, engagés et confirmés dans leurs domaines de compétences, ils développent une approche collaborative et novatrice et font de vos priorités les leurs." 
                         
-                        : "Our team of engineers combines in-depth knowledge of your industry, expertise in your field of competence, and strong convictions about the actions to be taken. They accompany you pragmatically and innovatively, either on-site or remotely, to shape your future, achieve your objectives, and successfully transform your organization. Passionate, committed, and experienced in their respective domains, they adopt a collaborative and innovative approach, making your priorities their own."}
+                        : "Our team of engineers combines in-depth knowledge of your industry with a solid expertise of your field of competence, and strong confidence in the actions to be carried out. With pragmatism and innovation, they will be with you either on-site or remotely, to shape your future, achieve your goals, and successfully transform your organization. Passionate, committed, and experts in their respective fields, they adopt a collaborative and innovative approach, making your priorities their own."}
                     </p>
                 </div>
             </div>
