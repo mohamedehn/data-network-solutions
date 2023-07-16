@@ -255,7 +255,7 @@ export default function Header() {
                       return null; // Ignorer le rendu du bouton si la langue actuelle correspond à celle du bouton
                     }
 
-                    return (
+                    return ( 
                       <button key={name} onClick={() => {
                         i18next.changeLanguage(code);
                         window.location.reload();

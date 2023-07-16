@@ -37,19 +37,17 @@ app.post("/api/contact", bodyParser.urlencoded({extended : false}), (req, res) =
     const name = req.body.firstName;
     const lastName = req.body.lastName;
     const email = req.body.email;
-    const subject = req.body.subject
     const message = req.body.message;
     const phone = req.body.phone;
     const mail = {
         from : name,
         to : process.env.EMAIL_ADDRESS,
-        subject : "Formulaire de contact Prestat'air",
+        subject : "Formulaire de contact DNS France",
         html : `
         <p>Nom: ${lastName}<p>
         <p>Prénom: ${name}<p>
         <p>Email: ${email}<p>
         <p>Téléphone: ${phone}<p>
-        <p>Objet: ${subject}<p> 
         <p>Message: ${message}<p> 
         `
     }
