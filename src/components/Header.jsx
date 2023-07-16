@@ -90,17 +90,17 @@ export default function Header() {
           {
             name: 'Consulting and Audit',
             description: 'Together, we will find solutions to your challenges.',
-            href: '#consulting',
+            href: '#conseil',
             icon: UserGroupIcon,
           },
           {
             name: 'Engineering',
             description: 'In-depth knowledge of your industry, expertise in your field, and strong beliefs in the actions to be taken.',
-            href: '#engineering',
+            href: '#ingenierie',
             icon: Cog6ToothIcon,
           },
           {
-            name: 'Consulting',
+            name: 'Consultancy',
             description: 'We accompany you from start to finish in your projects.',
             href: '#consulting',
             icon: ClipboardDocumentListIcon,
@@ -212,15 +212,19 @@ export default function Header() {
             </NavLink>
 
             <Popover as='nav'>
-              
-              {languages.map(({ code, flag, name }) => (
-                <button onClick={() => {
+            {languages.map(({ code, flag, name }) => {
+              if (code === i18next.language) {
+                return null; // Ignorer le rendu du bouton si la langue actuelle correspond à celle du bouton
+              }
+
+              return (
+                <button key={name} onClick={() => {
                   i18next.changeLanguage(code);
                   window.location.reload();
                 }} className='flex'>{flag}</button>
-              ))}
+              );
+            })}
             </Popover>
-
           </Popover.Group>
         </div>
       </div>
@@ -246,12 +250,18 @@ export default function Header() {
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
-                  { languages.map(({code, name, flag})=>(
-                    <button onClick={() => {
-                      i18next.changeLanguage(code);
-                      window.location.reload();
-                    }} className='flex'>{flag}</button>
-                  ))}
+                  {languages.map(({ code, flag, name }) => {
+                    if (code === i18next.language) {
+                      return null; // Ignorer le rendu du bouton si la langue actuelle correspond à celle du bouton
+                    }
+
+                    return (
+                      <button key={name} onClick={() => {
+                        i18next.changeLanguage(code);
+                        window.location.reload();
+                      }} className='flex'>{flag}</button>
+                    );
+                  })}
                 </div>
               </div>
               <div className="mt-6">

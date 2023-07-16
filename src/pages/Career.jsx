@@ -4,6 +4,7 @@ import HeaderCareer from "../components/HeaderCareer"
 import CareerCard from "../components/CareerCard"
 import Form from "../components/Form"
 import { useEffect } from "react";
+import React from "react"
 
 
 export default function Career () {

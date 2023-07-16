@@ -33,17 +33,17 @@ const featuresEn = [
   {
     name: 'Consulting and Audit',
     description: 'Together, we will find solutions to your challenges.',
-    href: '#consulting',
+    href: '#conseil',
     icon: UserGroupIcon,
   },
   {
     name: 'Engineering',
     description: 'In-depth knowledge of your industry, expertise in your field, and strong beliefs in the actions to be taken.',
-    href: '#engineering',
+    href: '#ingenierie',
     icon: Cog6ToothIcon,
   },
   {
-    name: 'Consulting',
+    name: 'Consultancy',
     description: 'We accompany you from start to finish in your projects.',
     href: '#consulting',
     icon: ClipboardDocumentListIcon,
