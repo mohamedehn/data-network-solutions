@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 import HeaderCareer from "../components/HeaderCareer";
 import Footer from "../components/Footer";
 import Error from "./Error";
-import Form from "../components/Form"
-import ScrollToTop from "../components/ScrollToTop"
+import ScrollToTop from "../components/ScrollToTop";
+import CareerContact from "../components/CareerContact";
+
 
 export default function Job () {
 
@@ -71,7 +72,7 @@ export default function Job () {
                         </div>
                     ))
                 }
-                <Form/>
+                <CareerContact/>
                 <Footer/>
                 <ScrollToTop/>
             </div>

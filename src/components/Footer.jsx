@@ -3,22 +3,28 @@ import React from "react";
 
 export default function Footer (){
 
-    const footerNavs = [
-        {
-            href: '/mentions',
-            name: 'Mentions légales'
-        },
-        {
-            href: '/cookies',
-            name: 'Cookies'
-        },
-    ]
+    const i18nextCookieValue = getCookieValue('i18next');
+
+  //function pour vérifier la valeur du cookie i18 next
+  function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(';');
+    
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      
+      if (cookie.startsWith(cookieName + '=')) {
+        return cookie.substring(cookieName.length + 1);
+      }
+    }
+    
+    return null;
+  };
 
     return (
         <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto">
             <div className="mt-8 items-center justify-between sm:flex">
                 <div className="mt-4 sm:mt-0">
-                    &copy; 2023 Data Network Solutions Tous droits réservés.
+                    &copy; 2023 {i18nextCookieValue === 'fr'? 'DNS France Tous droits réservés.' : 'DNS France All rights reserved.'} 
                 </div>
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-4">
@@ -49,15 +55,16 @@ export default function Footer (){
                     </ul>
                 </div>
                 <ul className="items-center justify-center space-y-5 sm:flex sm:space-x-4 sm:space-y-0 pt-[10px]">
-                {
-                    footerNavs.map((item, idx) => (
-                        <li className=" hover:text-gray-800" key={idx}>
-                            <NavLink to={item.href} key={idx}>
-                                {item.name}
+                        <li className=" hover:text-gray-800">
+                            <NavLink to='/mentions'>
+                                {i18nextCookieValue === 'fr' ? 'Mentions légales' : 'Legal notice'}
                             </NavLink>
                         </li>
-                    ))
-                }
+                        <li className=" hover:text-gray-800">
+                            <NavLink to='/cookies'>
+                                Cookies
+                            </NavLink>
+                        </li>
                     <li className="hover:text-gray-800 list-none"> 
                         <a href="https://mohamedehn.github.io/portfolio/">Powered by Coding Corp</a>
                     </li>
