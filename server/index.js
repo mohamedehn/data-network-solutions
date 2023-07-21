@@ -14,6 +14,12 @@ const app = express();
 
 app.use(express.static(path.resolve(__dirname, '../build')));
 
+const corsOptions = {
+    origin: "https://classy-kataifi-59b809.netlify.app/", // Remplacez par le domaine de votre site déployé
+  };
+  
+app.use(cors(corsOptions));
+
 app.use(cors());
 app.use(bodyParser.json());
 
