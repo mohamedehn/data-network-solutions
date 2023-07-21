@@ -32,7 +32,7 @@ const Form = () => {
   const handleSubmit = async (e) =>{
     e.preventDefault(); //pour éviter que la page se rafraichisse
     setButtonText("Envoi en cours")
-    let response = await fetch("http://localhost:3001/api/contact", {
+    let response = await fetch("https://classy-kataifi-59b809.netlify.app/api/contact", {
       method : "POST",
       headers : {
         "Content-Type" : "application/json;charset=utf-8"
