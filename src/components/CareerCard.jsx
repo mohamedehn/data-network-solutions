@@ -3,7 +3,25 @@ import { NavLink } from "react-router-dom"
 import posts from "../job.json"
 import React from "react"
 
+
 export default function CareerCard () {
+
+       //function pour vérifier la valeur du cookie i18 next
+function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(';');
+    
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      
+      if (cookie.startsWith(cookieName + '=')) {
+        return cookie.substring(cookieName.length + 1);
+      }
+    }
+    
+    return null;
+  };
+  
+  const i18nextCookieValue = getCookieValue('i18next');
 
     useEffect(()=>{
         window.scrollTo(0,0)
@@ -13,10 +31,10 @@ export default function CareerCard () {
         <section className="mt-12 mx-auto px-4 max-w-screen-xl lg:px-8">
             <div className="text-center">
                 <h1 className="text-3xl text-gray-800 font-semibold">
-                    Offres d'emplois
+                    {i18nextCookieValue === 'fr'? "Offres d'emplois" : 'Job offers'}
                 </h1>
                 <p className="mt-3 text-gray-500">
-                    Rejoignez l'aventure DNS
+                    {i18nextCookieValue === 'fr' ? "Rejoignez l'aventure DNS" : 'Join the DNS adventure'}
                 </p>
             </div>
             <div className="mt-12 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">

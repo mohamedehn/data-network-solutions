@@ -10,6 +10,23 @@ import CareerContact from "../components/CareerContact";
 
 export default function Job () {
 
+     //function pour vérifier la valeur du cookie i18 next
+    function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(';');
+    
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      
+      if (cookie.startsWith(cookieName + '=')) {
+        return cookie.substring(cookieName.length + 1);
+      }
+    }
+    
+    return null;
+  };
+  
+  const i18nextCookieValue = getCookieValue('i18next');
+
     const params = useParams();
 
     const product = job.find((offer) => params.id === offer.id) 
@@ -38,23 +55,33 @@ export default function Job () {
                                         <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"></dd>
                                     </div>
                                     <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">Intitulé du poste</dt>
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {i18nextCookieValue === 'fr' ? 'Intitulé du poste' : 'Job description'}
+                                        </dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{data.title}</dd>
                                     </div>
                                     <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">Date de publication</dt>
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {i18nextCookieValue === 'fr' ? 'Date de publication' : 'Publication date'}
+                                        </dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{data.date}</dd>
                                     </div>
                                     <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">Rémunération</dt>
-                                        <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">A déterminer selon le profil</dd>
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {i18nextCookieValue === 'fr' ? 'Rémunération' : 'Salary'}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                                            {i18nextCookieValue === 'fr' ? 'A déterminer selon le profil' : 'To be determined based on the profile'}
+                                        </dd>
                                     </div>
                                     <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                         <dt className="text-sm font-medium text-gray-500">Description</dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{data.desc}</dd>
                                     </div>
                                     <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">Votre profil : </dt>
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {i18nextCookieValue === 'fr' ? 'Votre profil' : 'Your profil'} : 
+                                        </dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
                                         <ul className="divide-y divide-gray-200 rounded-md border border-gray-200">
                                             <li className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">

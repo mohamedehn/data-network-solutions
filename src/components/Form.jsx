@@ -1,54 +1,53 @@
 // @ts-nocheck
 import React from "react";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Form = () => {
 
-  //on initialise un objet contenant les différentes partis du formulaire afin de les initialiser avec "an empty strings"
-  const formInitialDetails = {
-    firstName : "",
-    lastName : "",
-    email : "",
-    phone : "",
-    message : "",
-  };
+  // //on initialise un objet contenant les différentes partis du formulaire afin de les initialiser avec "an empty strings"
+  // const formInitialDetails = {
+  //   firstName : "",
+  //   lastName : "",
+  //   email : "",
+  //   phone : "",
+  //   message : "",
+  // };
 
   const i18nextCookieValue = getCookieValue('i18next');
 
-  const [formDetails, setFromDetails] = useState(formInitialDetails); 
-  const [buttonText, setButtonText] = useState(i18nextCookieValue === 'fr'? 'Envoyer' : "Submit"); //gestion de l'état du bouton envoyer
-  const [status, setStatus] = useState({});
-  const navigate = useNavigate(); // pour rediriger sur la page de confirmation
+  // const [formDetails, setFromDetails] = useState(formInitialDetails); 
+  const [buttonText] = useState(i18nextCookieValue === 'fr'? 'Envoyer' : "Submit"); //gestion de l'état du bouton envoyer
+  const [status] = useState({});
+  // const navigate = useNavigate(); // pour rediriger sur la page de confirmation
 
-  const onFormUpdate = (category, value) =>{
-    setFromDetails({
-      ...formDetails,
-      [category] : value,
-    })
-  };
+  // const onFormUpdate = (category, value) =>{
+  //   setFromDetails({
+  //     ...formDetails,
+  //     [category] : value,
+  //   })
+  // };
 
   //function pour envoyer l'email
-  const handleSubmit = async (e) =>{
-    e.preventDefault(); //pour éviter que la page se rafraichisse
-    setButtonText("Envoi en cours")
-    let response = await fetch("/api/contact", {
-      method : "POST",
-      headers : {
-        "Content-Type" : "application/json;charset=utf-8"
-      },
-      body : JSON.stringify(formDetails) //pour transformer l'objet en strings
-    });
-    let result = await response.json();
-    setButtonText("Envoyé");
-    setFromDetails(formInitialDetails);
-    if (result.code === 200){
-      setStatus({success : true, message : "Formulaire envoyé avec succès!"});
-      navigate("/success")
-    }else {
-      setStatus({danger : false, message : "Un problème est survenue..."})
-    }
-  }
+  // const handleSubmit = async (e) =>{
+  //   e.preventDefault(); //pour éviter que la page se rafraichisse
+  //   setButtonText("Envoi en cours")
+  //   let response = await fetch("/api/contact", {
+  //     method : "POST",
+  //     headers : {
+  //       "Content-Type" : "application/json;charset=utf-8"
+  //     },
+  //     body : JSON.stringify(formDetails) //pour transformer l'objet en strings
+  //   });
+  //   let result = await response.json();
+  //   setButtonText("Envoyé");
+  //   setFromDetails(formInitialDetails);
+  //   if (result.code === 200){
+  //     setStatus({success : true, message : "Formulaire envoyé avec succès!"});
+  //     navigate("/success")
+  //   }else {
+  //     setStatus({danger : false, message : "Un problème est survenue..."})
+  //   }
+  // }
 
   // les variable ci-dessous permettent de récupérer les cookies et ainsi vérifier si ils sont accepté ou non
   // on interviendra ensuite sur le bouton envoyer afin de le rendre inactif si les cookies ont été rejetées ou en attente de choix
@@ -106,7 +105,7 @@ const Form = () => {
               "Please feel free to submit your request or inquire about collaborating with our company by using the form provided below."}
             </p>
           </div>
-          <form onSubmit={handleSubmit} action="../pages/Success/">
+          <form action="https://formsubmit.co/contact@datanetworksolutions.fr" method="POST">
           <input type="hidden" name="form-name" value="contact" />
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
             <div className="flex flex-wrap -m-2">
@@ -117,9 +116,7 @@ const Form = () => {
                   </label>
                   <input type="text" id="last-name" name="name" 
                     required
-                    value={formDetails.lastName}
                     autoComplete="family-name"
-                    onChange={(e) => onFormUpdate("lastName", e.target.value)}
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-blue-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -129,10 +126,9 @@ const Form = () => {
                   <label htmlFor="name" className="leading-7 text-sm text-gray-600">
                     {i18nextCookieValue === 'fr'? 'Prénom' : "First Name"}
                   </label>
-                  <input type="text" id="name" name="first-name" required
-                    value={formDetails.firstName}
+                  <input type="text" id="name" name="first-name" 
+                    required
                     autoComplete="given-name"
-                    onChange={(e) => onFormUpdate("firstName", e.target.value)}
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-blue-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -146,9 +142,7 @@ const Form = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formDetails.email}
                     autoComplete="email"
-                    onChange={(e) => onFormUpdate("email", e.target.value)}
                     required
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-blue-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
@@ -164,9 +158,7 @@ const Form = () => {
                     id="phone"
                     name="phone"
                     required
-                    value={formDetails.phone}
                     autoComplete="tel"
-                    onChange={(e) => onFormUpdate("phone", e.target.value)}
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-blue-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -180,8 +172,6 @@ const Form = () => {
                     id="message"
                     name="message"
                     required
-                    value={formDetails.message}
-                    onChange={(e) => onFormUpdate("message", e.target.value)}
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-blue-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   ></textarea>
                 </div>
