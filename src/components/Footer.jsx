@@ -66,7 +66,7 @@ export default function Footer (){
                             </NavLink>
                         </li>
                     <li className="hover:text-gray-800 list-none"> 
-                        <a href="https://mohamedehn.github.io/portfolio/">Powered by Coding Corp</a>
+                        <a href="http://codingcorp.fr/">Powered by Coding Corp</a>
                     </li>
                 </ul>
             </div>

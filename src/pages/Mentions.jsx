@@ -56,7 +56,7 @@ function Mentions (){
                             {i18nextCookieValue === 'fr' ? 'Nom entreprise' : 'Company Name'}: Coding Corp <br/>
                             SIRET : 953 263 423 00014<br/> 
                             Email : contact@codingcorp.fr <br/>
-                            Web : https://mohamedehn.github.io/portfolio <br/>
+                            Web : http://codingcorp.fr/<br/>
                             Hébergement : HOSTINGER
                         </span>
                     </p>
